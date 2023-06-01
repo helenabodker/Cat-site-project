@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Cats🐱</title>
+    <style>
+      body {
+        background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 45px;
+        line-height: 47px;
+        margin: 15px 15px 0;
+      }
+
+      h2 {
+        text-align: center;
+        font-weight: 400;
+        line-height: 40px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+      }
+
+      img {
+        display: block;
+        max-width: 90%;
+        margin: 0 auto 20px;
+      }
+
+      p {
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.5;
+        font-size: 12px;
+        color: #453953;
+      }
+
+      hr {
+        margin: 0 auto;
+        max-width: 70%;
+        background-color: #453953;
+        height: 1px;
+        border: none;
+      }
+
+      button {
+        display: block;
+        margin: 25px auto 25px;
+        background-color: #975a5e;
+        border: 0px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        font-size: 20px;
+        padding: 15px 35px;
+        border-radius: 15px;
+        transition: all 250ms ease-in-out;
+      }
+
+      button:hover {
+        cursor: pointer;
+        background: #453953;
+      }
+
+      .container {
+        max-width: 400px;
+        margin: 30px auto;
+        padding: 30px 50px;
+        border-radius: 25px;
+        background: white;
+        box-shadow: 2px 2px 10px rgba(69, 57, 84, 0.645);
+      }
+
+      .headings {
+        display: block;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        margin: 0 auto;
+        max-width: 90%;
+        color: #975a5e;
+        border: 0.5px solid #453953;
+        border-radius: 15px;
+      }
+
+      .learn-more {
+        color: #975a5e;
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+      }
+
+      .learn-more:hover {
+        text-decoration: underline;
+      }
+
+      .footer {
+        display: block;
+        text-align: center;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        color: #453953;
+        font-size: 10px;
+        padding-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="headings">
+        <h1>Cats</h1>
+        <h2>Why cats are great</h2>
+      </div>
+      <img
+        src="https://i.guim.co.uk/img/media/26392d05302e02f7bf4eb143bb84c8097d09144b/446_167_3683_2210/master/3683.jpg?width=645&quality=45&dpr=2&s=none"
+        alt="Cute cat"
+      />
+      <p>
+        The cat <em>(Felis catus)</em> is a domestic species of small
+        carnivorous mammal. It is the only domesticated species in the family
+        <em>Felidae</em> and is commonly referred to as the domestic cat or
+        house cat to distinguish it from the wild members of the family.
+        <br />
+        Cats are commonly kept as house pets but can also be farm cats or feral
+        cats; the feral cat ranges freely and avoids human contact. Domestic
+        cats are valued by humans for companionship and their ability to kill
+        rodents. About 60 cat breeds are recognized by various cat registries.
+      </p>
+      <a
+        href="https://en.wikipedia.org/wiki/Cat"
+        class="learn-more"
+        target="_blank"
+      >
+        Learn more on Wikipedia</a
+      >
+      <button>Meow</button>
+      <hr />
+      <span class="footer">Coded by <strong>Helena Bødker</strong></span>
+    </div>
+
+    <script>
+      function meow() {
+        let name = prompt("What's your name?");
+        let doYouHaveCat = prompt("Do you have a cat?");
+        let heading = document.querySelector("h1");
+
+        if (doYouHaveCat === "yes" || doYouHaveCat === "Yes") {
+          let catName = prompt("What is its name?");
+          alert("That's amazing, " + name + "!");
+          heading.innerHTML = catName + " is such a cute name😻";
+        } else {
+          alert("I'm sorry to hear, " + name + "!😿");
+          heading.innerHTML = "You should definitely get a cat!";
+        }
+        window.scrollTo(0, 0);
+      }
+
+      let meowButton = document.querySelector("button");
+
+      meowButton.addEventListener("click", meow);
+    </script>
+  </body>
+</html>
